@@ -161,18 +161,23 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Contato */
 .contact {
   padding: 60px 20px;
   text-align: center;
-  min-height: 400px; /* Aumentei a altura mínima para dar mais espaço */
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f4f4f4; /* Cor de fundo para diferenciar */
+  background: #f4f4f4;
 }
 
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
 /* Garantir que o body tenha rolagem suave */
 body {
   background: #f4f4f4;
