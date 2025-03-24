@@ -106,7 +106,7 @@ h2 {
 
 .about-content {
   max-width: 800px; /* Aumentei para caber o texto maior */
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   text-align: justify; /* Texto justificado para um visual profissional */
   color: #555; /* Cor um pouco mais suave */
 }
@@ -172,10 +172,34 @@ h2 {
 }
 
 /* Contato */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  min-height: 300px; /* Garante que a seção tenha altura mínima */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .contact-links {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px; /* Espaço entre o título e os botões */
+}
+
+.contact-links .btn {
+  background: #F97316;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-links .btn:hover {
+  background: #D55A00;
 }
 
 .contact-links .btn i {
