@@ -214,3 +214,37 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* Bandeirinhas de idioma */
+.lang-flags {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.flag {
+  cursor: pointer;
+  position: relative;
+}
+
+.flag img {
+  width: 24px;
+  height: 18px;
+  border-radius: 2px;
+}
+
+/* Tooltip */
+.flag:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 1000;
+}
