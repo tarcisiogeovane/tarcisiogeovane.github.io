@@ -175,35 +175,27 @@ h2 {
 .contact {
   padding: 60px 20px;
   text-align: center;
-  min-height: 300px; /* Garante que a seção tenha altura mínima */
+  min-height: 400px; /* Aumentei a altura mínima para dar mais espaço */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #f4f4f4; /* Cor de fundo para diferenciar */
 }
 
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px; /* Espaço entre o título e os botões */
+/* Garantir que o body tenha rolagem suave */
+body {
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  overflow-y: scroll; /* Força o scroll mesmo que o conteúdo seja curto */
 }
 
-.contact-links .btn {
-  background: #F97316;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.contact-links .btn:hover {
-  background: #D55A00;
-}
-
-.contact-links .btn i {
-  margin-right: 8px;
+/* Ajuste no footer ou espaçamento final, se necessário */
+.contact::after {
+  content: "";
+  display: block;
+  height: 100px; /* Adiciona um espaço extra no final da página */
 }
 
 /* Modal */
