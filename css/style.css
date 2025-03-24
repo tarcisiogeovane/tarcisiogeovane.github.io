@@ -101,14 +101,14 @@ h2 {
 /* Sobre */
 .about {
   padding: 60px 20px;
-  text-align: center;
+  text-align: center; /* Centraliza o título */
 }
 
 .about-content {
-  max-width: 800px; /* Aumentei para caber o texto maior */
-  /*margin: 0 auto;*/
-  text-align: justify; /* Texto justificado para um visual profissional */
-  color: #555; /* Cor um pouco mais suave */
+  max-width: 800px; /* Largura máxima para o texto */
+  margin: 0 auto; /* Centraliza o contêiner na tela */
+  text-align: justify; /* Texto justificado dentro do contêiner */
+  color: #555;
 }
 
 .about-content p {
@@ -116,16 +116,6 @@ h2 {
   font-size: 1.1rem; /* Tamanho de fonte legível */
   line-height: 1.8; /* Altura da linha para melhor leitura */
 }
-
-/* Se preferir centralizado em vez de justificado, use isso: */
-/*
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  color: #555;
-}
-*/
 
 /* Projetos */
 .project-grid {
