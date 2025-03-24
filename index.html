@@ -11,7 +11,7 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">Tarcísio Geovane</div>
+    <div class="logo">Tarcisio Geovane</div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">Sobre</a></li>
@@ -24,8 +24,8 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content" data-aos="fade-up">
-      <h1>Desenvolvedor Front-End</h1>
-      <p>Apaixonado por criar soluções incríveis com código.</p>
+      <h1>Desenvolvedor Fullstack</h1>
+      <p>Transformando ideias em interfaces modernas e funcionais.</p>
       <a href="#projects" class="btn">Veja meus projetos</a>
     </div>
   </section>
@@ -34,7 +34,11 @@
   <section id="about" class="about">
     <h2 data-aos="fade-up">Sobre Mim</h2>
     <div class="about-content" data-aos="fade-up" data-aos-delay="100">
-      <p>Sou Tarcísio, desenvolvedor Front-End com experiência em HTML, CSS, JavaScript e React. Trabalhei em projetos na Trybe e estagiei na IBM, onde desenvolvi habilidades em criar interfaces práticas e modernas.</p>
+      <p>Sou um desenvolvedor full stack apaixonado por criar soluções tecnológicas inovadoras. Com experiência em linguagens como Python, R, Fortran, PHP, CSS e HTML, tenho a habilidade de desenvolver aplicações robustas e eficientes, abrangendo tanto o front-end quanto o back-end.
+
+        Minha jornada na área de tecnologia começou com um forte interesse por computadores e jogos, o que me levou a aprofundar meus conhecimentos em programação e desenvolvimento. Ao longo da minha carreira, trabalhei em projetos desafiadores, onde pude aplicar minhas habilidades em automação industrial, eletrotécnica e análise de dados, contribuindo para a resolução de problemas complexos e melhorando a experiência do usuário.
+        
+        Estou sempre em busca de novos desafios e oportunidades para aprender e crescer na área de desenvolvimento. Acredito que a colaboração e a inovação são fundamentais para o sucesso em projetos tecnológicos. Vamos trabalhar juntos para transformar ideias em realidade!</p>
     </div>
   </section>
 
@@ -43,14 +47,14 @@
     <h2 data-aos="fade-up">Projetos</h2>
     <div class="project-grid">
       <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-        <h3>Sistema de Tarefas</h3>
-        <p>Gerencie tarefas com React e CSS.</p>
-        <button class="btn" onclick="openModal('Projeto de exemplo com React')">Ver Mais</button>
+        <h3>Sistema de Gerenciamento de Tarefas</h3>
+        <p>Uma aplicação web para organizar tarefas, construída com React e CSS.</p>
+        <button class="btn" onclick="openModal('Desenvolvido durante a formação na Trybe, permite criar, editar e excluir tarefas.')">Ver Mais</button>
       </div>
       <div class="project-card" data-aos="fade-up" data-aos-delay="200">
         <h3>Portfólio Pessoal</h3>
-        <p>Este site, feito com HTML e CSS.</p>
-        <button class="btn" onclick="openModal('Site que você está vendo agora!')">Ver Mais</button>
+        <p>Este site, criado com HTML, CSS e JavaScript para exibir minhas habilidades.</p>
+        <button class="btn" onclick="openModal('Um projeto dinâmico e interativo hospedado no GitHub Pages.')">Ver Mais</button>
       </div>
     </div>
   </section>
@@ -63,24 +67,23 @@
       <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
       <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
       <div class="skill-item"><i class="fab fa-react"></i> React</div>
+      <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
     </div>
   </section>
 
   <!-- Contato -->
   <section id="contact" class="contact">
     <h2 data-aos="fade-up">Contato</h2>
-    <form data-aos="fade-up" data-aos-delay="100">
-      <input type="text" placeholder="Nome" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Mensagem" required></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
+    <div class="contact-links" data-aos="fade-up" data-aos-delay="100">
+      <a href="https://www.linkedin.com/in/tarcisiogeovanecoding" target="_blank" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/tarcisiogeovane" target="_blank" class="btn"><i class="fab fa-github"></i> GitHub</a>
+    </div>
   </section>
 
   <!-- Modal -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
+      <span class="close" onclick="closeModal()">×</span>
       <p id="modal-text"></p>
     </div>
   </div>
