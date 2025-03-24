@@ -1,56 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Tarcísio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarcísio Geovane - Portfólio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Tarcísio - Game Designer & Desenvolvedor</h1>
-        <nav>
-            <ul>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="projetos">
-        <h2>🎮 Projetos</h2>
-        <div class="projeto">
-            <h3>RPG Tático (em desenvolvimento)</h3>
-            <p>Inspirado em Final Fantasy Tactics. Desenvolvimento de mecânicas estratégicas e design de mapas.</p>
-            <img src="https://via.placeholder.com/600x300.png?text=Imagem+RPG+T%C3%A1tico" alt="RPG Tático">
-        </div>
-        <div class="projeto">
-            <h3>Turno da Madrugada</h3>
-            <p>Uma experiência imersiva de mistério e suspense. Desenvolvimento do enredo e ambientação.</p>
-            <img src="https://via.placeholder.com/600x300.png?text=Imagem+Turno+da+Madrugada" alt="Turno da Madrugada">
-        </div>
-    </section>
-    
-    <section id="habilidades">
-        <h2>🛠️ Habilidades Técnicas</h2>
-        <ul>
-            <li>🎮 Design de Jogos: Mecânicas, balanceamento e narrativa.</li>
-            <li>💻 Programação: Python, R, Fortran, PHP, HTML, CSS.</li>
-            <li>🛠️ Ferramentas: GameMaker, Godot, Unity.</li>
-            <li>🌎 Colaboração Remota e gestão de projetos.</li>
-        </ul>
-    </section>
-    
-    <section id="contato">
-        <h2>📬 Contato</h2>
-        <p>📧 Seu e-mail</p>
-        <p>🌐 <a href="https://github.com/tarcisiogeovanecoding" target="_blank">GitHub</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Tarcísio - Todos os direitos reservados.</p>
-    </footer>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Tarcísio Geovane</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Desenvolvedor Front-End</h1>
+      <p>Apaixonado por criar soluções incríveis com código.</p>
+      <a href="#projects" class="btn">Veja meus projetos</a>
+    </div>
+  </section>
+
+  <!-- Sobre Mim -->
+  <section id="about" class="about">
+    <h2 data-aos="fade-up">Sobre Mim</h2>
+    <div class="about-content" data-aos="fade-up" data-aos-delay="100">
+      <p>Sou Tarcísio, desenvolvedor Front-End com experiência em HTML, CSS, JavaScript e React. Trabalhei em projetos na Trybe e estagiei na IBM, onde desenvolvi habilidades em criar interfaces práticas e modernas.</p>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projects" class="projects">
+    <h2 data-aos="fade-up">Projetos</h2>
+    <div class="project-grid">
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Sistema de Tarefas</h3>
+        <p>Gerencie tarefas com React e CSS.</p>
+        <button class="btn" onclick="openModal('Projeto de exemplo com React')">Ver Mais</button>
+      </div>
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Portfólio Pessoal</h3>
+        <p>Este site, feito com HTML e CSS.</p>
+        <button class="btn" onclick="openModal('Site que você está vendo agora!')">Ver Mais</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="skills" class="skills">
+    <h2 data-aos="fade-up">Habilidades</h2>
+    <div class="skills-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+      <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+      <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+      <div class="skill-item"><i class="fab fa-react"></i> React</div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contact" class="contact">
+    <h2 data-aos="fade-up">Contato</h2>
+    <form data-aos="fade-up" data-aos-delay="100">
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mensagem" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function openModal(text) {
+      document.getElementById('modal-text').innerText = text;
+      document.getElementById('modal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
