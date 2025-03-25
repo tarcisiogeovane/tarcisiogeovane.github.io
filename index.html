@@ -93,7 +93,7 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script src="script.js"></script> <!-- Adicionei esta linha -->
+  <script src="script.js"></script>
   <script>
     AOS.init();
 
@@ -113,6 +113,8 @@
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         autoDisplay: false
       }, 'google_translate_element');
+      // Após inicializar, conecta as bandeiras
+      setupLanguageFlags();
     }
 
     function changeLanguage(lang) {
@@ -121,15 +123,23 @@
         select.value = lang;
         select.dispatchEvent(new Event('change'));
       } else {
-        console.error('Seletor do Google Translate não encontrado. Aguarde o carregamento.');
+        // Tenta novamente após 500ms se o select não estiver disponível
+        setTimeout(() => changeLanguage(lang), 500);
       }
     }
 
-    document.querySelectorAll('.flag').forEach(flag => {
-      flag.addEventListener('click', () => {
-        const lang = flag.getAttribute('data-lang');
-        changeLanguage(lang);
+    function setupLanguageFlags() {
+      document.querySelectorAll('.flag').forEach(flag => {
+        flag.addEventListener('click', () => {
+          const lang = flag.getAttribute('data-lang');
+          changeLanguage(lang);
+        });
       });
+    }
+
+    // Garante que o setup seja chamado mesmo se o Google Translate demorar
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(setupLanguageFlags, 1000); // Dá um tempo extra pro Google Translate carregar
     });
   </script>
   <div id="google_translate_element" style="display: none;"></div>
