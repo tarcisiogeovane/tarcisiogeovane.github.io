@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const projetos = document.querySelectorAll(".projeto");
+    const projetos = document.querySelectorAll(".project-card"); // Mudado de .projeto para .project-card
 
     projetos.forEach(projeto => {
         projeto.addEventListener("mouseenter", () => {
